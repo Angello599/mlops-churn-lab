@@ -38,5 +38,9 @@ los detecta. Esta ficha es el registro de esas decisiones: se versiona junto al 
 
 | Fecha | Decisión | Motivo |
 |---|---|---|
-| | Umbral de decisión elegido por costo, no 0.5 | Un FN cuesta el doble que un FP |
-| | El modelo se selecciona por F1 de validación cruzada | Test queda reservado para la evaluación final |
+| 2026-11-14 | Umbral de decisión elegido por costo, no 0.5 (umbral elegido: 0.30) | Un FN cuesta el doble que un FP; con 0.30 el costo por cliente baja de S/ 45.00 a S/ 43.33 |
+| 2026-11-14 | El modelo se selecciona por F1 de validación cruzada | Test queda reservado para la evaluación final |
+| 2026-11-14 | `"None"` de `internet_service` se trata como categoría (`keep_default_na=False`) | Son 30 clientes sin internet, no datos faltantes |
+| 2026-11-14 | Preprocesamiento dentro de un `Pipeline` de scikit-learn | Elimina el training-serving skew del `get_dummies` en la API |
+| 2026-11-14 | Se agrega `gradient_boosting` como cuarto candidato | Reto del laboratorio; F1 CV 0.6476 ± 0.0761, no supera a random_forest (0.6900) |
+| 2026-11-14 | Champion: random_forest v1 (F1 test 0.7013, ROC-AUC 0.7989, costo S/ 43.33) | Pasa los 4 checks del quality gate |
