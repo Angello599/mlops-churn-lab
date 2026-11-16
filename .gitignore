@@ -95,3 +95,11 @@ data/train.csv
 data/test.csv
 reports/data_validation.json
 reports/evaluation_report.json
+
+# Lab 14.2
+logs/
+infra/.terraform/
+infra/terraform.tfstate*
+infra/terraform.tfstate.d/
+infra/registry/.terraform/
+infra/registry/terraform.tfstate*

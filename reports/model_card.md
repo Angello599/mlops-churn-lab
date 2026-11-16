@@ -11,7 +11,7 @@ Features: tenure_months, monthly_charges, support_tickets_last_6m, gender, contr
 
 ## Modelo
 Tipo: random_forest dentro de un Pipeline de scikit-learn (preprocesamiento incluido).
-Run de MLflow: `07cd498daf1f437ca1f73cdfa63acd08`.
+Run de MLflow: `3c13c35ebc6f43ac88bf0688b3ef7694`.
 
 ## Métricas en test (umbral 0.3)
 | F1 | Precision | Recall | ROC-AUC | Costo por cliente |
