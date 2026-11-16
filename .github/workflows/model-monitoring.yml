@@ -41,7 +41,8 @@ jobs:
             exit 1
           fi
           echo "Usando artefactos de la corrida $RUN_ID"
-          gh run download "$RUN_ID" --name production-artifacts --dir .
+          gh run download "$RUN_ID" --name production-artifacts --dir /tmp/prod
+          cp -r /tmp/prod/. .   # el repo ya trae data/feature_names.csv; gh no sobrescribe
 
       - name: Ejecutar monitor
         id: monitor
